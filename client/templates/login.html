@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Đăng Nhập</h1>
+  <input type="text" ng-model="user.name" placeholder="Tên đăng nhập" ng-class="{'input-border':!user.name.length && wronginput}"/>
+  <input type="password" ng-model="user.password" placeholder="Mật khẩu" ng-class="{'input-border':!user.password.length && wronginput}"/>
+  <button class="btn btn-primary" ng-click="login()">Đăng nhập</button>
+  <button class="btn btn-danger" ng-click="gohome()">Hủy</button>
+  <div ng-if="success" class="alert alert-success fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Bạn đã đăng nhập thành công
+  </div>
+  <div ng-if="wrongpassword" class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Warning!</strong> Sai mật khẩu
+  </div>
+  <div ng-if="wrongname" class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Warning!</strong> Sai Tài khoản
+  </div>
+</div>

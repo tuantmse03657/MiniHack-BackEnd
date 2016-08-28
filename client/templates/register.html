@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Đăng ký</h1>
+  <input type="text" ng-model="user.name" placeholder="Tên đăng nhập" ng-class="{'input-border':!user.name.length && wronginput}"/>
+  <input type="password" ng-model="user.password" placeholder="Mật khẩu" ng-class="{'input-border':!user.password.length && wronginput}"/>
+  <input type="text" ng-model="user.email" placeholder="Email" ng-class="{'input-border':!user.email.length && wronginput}"/>
+  <button class="btn btn-primary" ng-click="register()">Đăng ký</button>
+  <button class="btn btn-danger" ng-click="gohome()">Hủy</button>
+  <div ng-if="success" class="alert alert-success fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Bạn đã đăng ký thành công
+  </div>
+  <div ng-if="conflict" class="alert alert-warning fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Warning!</strong> Tài khoản đã tồn tại
+  </div>
+</div>

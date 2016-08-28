@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>List user</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in userlist">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" ng-click="register()">Đăng ký</button>
+  <button class="btn btn-primary" ng-click="login()">Đăng nhập</button>
+</div>
